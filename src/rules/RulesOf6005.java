@@ -39,11 +39,7 @@ public class RulesOf6005 {
 	    if (writtenByYourself) return true;
 	    if (writtenAsCourseWork) return false;
 
-	    // If the code is not written by you, available to others and implementation not required
-	    if (availableToOthers && !implementationRequired) return citingYourSource; // Allowed if properly cited.
-	    
-	    // If the code is not available to others, it's allowed.
-	    return false;
+	    return availableToOthers && !implementationRequired ? citingYourSource : false;
 	}
 
 
